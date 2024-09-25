@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #bbbbbb;
+  background-color: #f7f4f4;
 }
 .container{
   color: black;
@@ -100,7 +100,6 @@ body{
   text-align: center;
 }
 .tableContainer table,tr,td{
-  
   border-collapse: collapse;
 }
 
