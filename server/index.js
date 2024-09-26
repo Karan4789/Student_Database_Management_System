@@ -78,7 +78,7 @@ app.delete("/delete/:id",async(req,res)=>{
 
 
 //For connecting to Database using connection string
-mongoose.connect("mongodb://localhost:27017/StudentDB")
+mongoose.connect("Your MongoDb connection string")
 .then(()=>{console.log("connect to db")
     app.listen(PORT,()=>console.log("Server is running"))
 })
