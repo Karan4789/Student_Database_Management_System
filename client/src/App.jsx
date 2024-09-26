@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Formtables from "./component/Formtables";
 import axios from "axios";
+import Header from './component/Header';
 
 
 axios.defaults.baseURL = "http://localhost:8080"
@@ -38,11 +39,11 @@ function App() {
       setFormdata((prev)=>{
          return{
             ...prev,
-            [name] : value
+            [name] : value,
             
-         }
-      })
-   }
+         };
+      });
+   };
    
    const handleSubmit = async(e) =>{
       e.preventDefault()
@@ -86,7 +87,7 @@ function App() {
    }
 
 
-   const handleEditOnChange = async()=>{
+   const handleEditOnChange = async(e)=>{
       const {value,name} = e.target
       setFormdataedit((prev)=>{
          return{
@@ -108,6 +109,9 @@ function App() {
 return (
   <>
    <div className='container'>
+
+   <Header />
+
     <button className='btn btn-add' onClick={()=>setaddSection(true)}>ADD</button>
      {
       addSection &&(
